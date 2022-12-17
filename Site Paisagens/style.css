@@ -1,0 +1,240 @@
+:root {
+    font-size: 62.5%;
+
+    --ff-heading: 'Epilogue',sans-serif;
+    --ff-texting: 'Open Sans',sans-serif;
+
+
+    --bg-primary: #28293E;
+    --fc-primary: #FFFFFF;
+    --fc-secundary: #BBB3E5;
+
+
+}
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+.page {
+    font-family: var(--ff-heading);
+    color: var(--fc-secundary);
+    background-color: var(--bg-primary);
+    
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    
+    
+    max-width: 32.9rem;
+    margin: 10.6rem auto 0;
+}
+
+
+main {
+    display: grid;
+    gap: 3.2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+header p {
+    color: var(--fc-secundary);
+    letter-spacing: 3px;
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    text-transform: uppercase;
+    
+    
+}
+
+h1 {
+    color: var(--fc-primary);
+    font-weight: 800;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+    
+    margin-top: 1.7rem;
+    margin-bottom: 8rem;
+    
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+    font-weight: 800;
+    
+    color: var(--fc-primary);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    
+}
+
+span {
+    
+    color: var(--bg-primary);
+    background-color: var(--fc-primary);
+    
+    
+    font-weight: 400;
+    
+    height: 3.8rem;
+    
+    
+    border-radius: 19px;
+    padding: 0 1rem;
+    
+    width:fit-content;
+    
+    display: inline-flex;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.6rem;
+}
+
+
+
+.cards h2 {
+    position: absolute;
+    left: 2.5rem;
+    bottom: 2.5rem;
+}
+
+
+.cards {
+    position: relative;
+    
+}
+
+.cards img {
+    height: 41.6rem;
+    object-fit: cover;
+    transition: all 200ms;
+}
+.cards img:hover {
+    opacity: 0.9;
+    transform: scale(1.07);
+    filter: brightness(0.9);
+}
+
+
+
+
+
+header {
+    animation: topdonw 450ms 100ms backwards;
+}
+
+
+@keyframes topdonw {
+    
+    0% {
+        opacity: 0;
+        transform: translateY(-90px);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: leftright 900ms 300ms backwards;
+}
+
+@keyframes leftright {
+    
+    0% {
+        opacity: 0;
+        transform: translateX(-90);
+    }  
+    
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+@media (min-width:700px) {
+    h1 {
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+        letter-spacing: -1px;
+    }
+
+    .page {
+    max-width:117rem;
+    padding: 0 5rem;
+}
+
+    main{
+        grid-template-areas:"A B" "C D" ;
+
+    } 
+}
+
+
+
+
+@media (min-width: 900px) {
+
+    h1 {
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+        letter-spacing: -1px;
+    }
+
+    .page {
+    max-width:117rem;
+    padding: 0 5rem;
+}
+
+    main{
+        grid-template-areas:"A B B" "C C D" ;
+
+    } 
+
+    main div:nth-child(1) {
+        grid-area: A;
+    }
+
+    main div:nth-child(2) {
+        grid-area: B;
+    }
+
+    main div:nth-child(3) {
+        grid-area: C;
+    }
+
+    main div:nth-child(4) {
+        grid-area: D;
+    }
+    
+}
+
+
+/* Estudar a funcao "Clamp" para estabelecer valores flexiveis   */
